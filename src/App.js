@@ -6,7 +6,8 @@ const App = () => {
 
 const API_ID = "78b702bd";
 const API_KEY = "afd2f79a04b1ecad0faad01c7f29539d";
-const API_URL = `https://api.edamam.com/search?q=banana&app_id=${API_ID}&app_key=${API_KEY}`;
+let q = "banana";
+const API_URL = `https://api.edamam.com/search?q=${q}&app_id=${API_ID}&app_key=${API_KEY}`;
 
 const [recipes, setRecipes] = useState([]);
 
@@ -23,6 +24,7 @@ const loadData = async () => {
 
   return (
     <div className="App">
+      <h1>React Practice - Fetch API data using useEffect</h1>
       <div className="container">
         {
           recipes.map((r,id) => (
@@ -31,6 +33,7 @@ const loadData = async () => {
               title={r.recipe.label}
               image={r.recipe.image}
               calories={r.recipe.calories}
+              ingredients={r.recipe.ingredients}
             />
           ))
         }

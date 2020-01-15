@@ -47,12 +47,32 @@
 .recipe {
   width: 40%;
   /* border: 1px solid Gray; */
-  margin: 20px;
+  margin: 5px;
   background-color: Beige;
+}
+
+.ingredients {
+  margin: 20px;
+  padding: 20px;
+  background-color: White;
 }
 
 img {
   margin: 40px;
   padding: 10px;
   background-color: White;
+}
+
+input {
+  margin: 20px;
+}
+
+li, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
 }
