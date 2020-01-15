@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe {
+  width: 40%;
+  border: 1px solid Gray;
+  margin: 20px;
+}
+
+img {
+  margin: 40px;
+}

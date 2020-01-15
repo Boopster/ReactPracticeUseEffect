@@ -23,16 +23,18 @@ const loadData = async () => {
 
   return (
     <div className="App">
-      {
-        recipes.map((r,id) => (
-          <Recipe
-            key={id}
-            title={r.recipe.label}
-            image={r.recipe.image}
-            calories={r.recipe.calories}
-          />
-        ))
-      }
+      <div className="container">
+        {
+          recipes.map((r,id) => (
+            <Recipe
+              key={id}
+              title={r.recipe.label}
+              image={r.recipe.image}
+              calories={r.recipe.calories}
+            />
+          ))
+        }
+      </div>
     </div>
   )
 };
