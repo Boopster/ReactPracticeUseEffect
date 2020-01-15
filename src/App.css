@@ -46,10 +46,13 @@
 
 .recipe {
   width: 40%;
-  border: 1px solid Gray;
+  /* border: 1px solid Gray; */
   margin: 20px;
+  background-color: Beige;
 }
 
 img {
   margin: 40px;
+  padding: 10px;
+  background-color: White;
 }
