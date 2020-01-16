@@ -6,7 +6,7 @@ const App = () => {
 
 const [recipes, setRecipes] = useState([]);
 const [show, setShow] = useState(false);
-const [query, setQuery] = useState("orange");
+const [query, setQuery] = useState("coffee");
 
 const API_ID = "78b702bd";
 const API_KEY = "afd2f79a04b1ecad0faad01c7f29539d";
@@ -23,16 +23,34 @@ const loadData = async () => {
   console.log(data.hits);
 }
 
+const handleChange = (event) => {
+  setQuery(event.target.value);
+}
+
+const handleSearch = (event) => {
+  event.preventDefault();
+  loadData();
+}
+
   return (
     <div className="App">
       <div className="header">
-        {/*<img className="icon" src="./favicon-32x32.png"/>*/}
         <div className="about">
           <h1>Recipe Finder</h1>
           <h2>React Practice - Fetch API data using useEffect</h2>
           <a href="https://www.pexels.com/photo/flat-lay-photography-of-variety-of-vegetables-1435904/">Photo by Engin Akyurt from Pexels</a>
         </div>
       </div>
+      <div>
+      <form onSubmit={handleSearch}>
+        <label for="search">Search by ingredient:
+          <input type="text" id="search" name="search" onChange={handleChange}/>
+        </label>
+        {/*<button onClick={handleSearch}>Submit</button>*/}
+        <input type="submit" value="Submit"/>
+        </form>
+      </div>
+
       <div className="container">
         {
           recipes.map((r,id) => (
