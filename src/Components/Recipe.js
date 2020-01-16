@@ -17,12 +17,10 @@ const Recipe = ({title, image, calories, ingredients, show, setShow}) => {
       <button onClick={e => {setShow(true)}}>Show Ingredients</button>
       <Modal
         show={show}
-        setShow={setShow}
-      >
-      <div className="ingredients">
-        
-        <ul>{ingredientsList}</ul>
-      </div>
+        setShow={setShow}>
+        <div className="ingredients">
+          <ul>{ingredientsList}</ul>
+        </div>
       </Modal>
     </div>
   )

@@ -14,6 +14,7 @@ class Modal extends Component {
         </div>
         <div className="actions">
           <button className="toggle-button" onClick={e => {this.props.setShow(false)}}>Close</button>
+          {/*<button className="toggle-button">Close</button>*/}
         </div>
       </div>
     );

@@ -1,13 +1,3 @@
-html, body {
-  height: 100%;
-}
-body {
-  background: #eee;
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
-}
-
 .modal {
   margin: 10px auto 20px auto;
   padding: 20px;
