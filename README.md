@@ -4,6 +4,8 @@ Tutorial link: https://medium.com/codefountain/fetch-api-data-using-useeffect-re
 
 In this project I used the useEffect React hook to fetch API data. I created a React application to pull data from a provider and used it in the application.
 
+## React Practice - Fetch API data using useEffect
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
