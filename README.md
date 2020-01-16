@@ -1,3 +1,7 @@
+#Recipe Finder App
+
+Tutorial link: https://medium.com/codefountain/fetch-api-data-using-useeffect-react-hook-465809ca12c6
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
