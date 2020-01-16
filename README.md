@@ -1,4 +1,4 @@
-#Recipe Finder App
+# Recipe Finder App
 
 Tutorial link: https://medium.com/codefountain/fetch-api-data-using-useeffect-react-hook-465809ca12c6
 
