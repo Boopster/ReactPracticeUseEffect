@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Modal.css';
 
 class Modal extends Component {
   render() {
@@ -6,12 +7,13 @@ class Modal extends Component {
       return null;
     }
     return (
-      <div>
-        <div>
+      <div className="modal" id="modal">
+        <h2>Ingredients List</h2>
+        <div className="content">
           {this.props.children}
         </div>
-        <div>
-          <button onClick={e => {this.props.setShow(false)}}>Close</button>
+        <div className="actions">
+          <button className="toggle-button" onClick={e => {this.props.setShow(false)}}>Close</button>
         </div>
       </div>
     );

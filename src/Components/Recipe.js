@@ -20,10 +20,10 @@ const Recipe = ({title, image, calories, ingredients, show, setShow}) => {
         setShow={setShow}
       >
       <div className="ingredients">
-        <h3>Ingredients</h3>
+        
         <ul>{ingredientsList}</ul>
       </div>
-      </Modal>  
+      </Modal>
     </div>
   )
 }
