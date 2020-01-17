@@ -12,28 +12,21 @@ body {
   text-align: center;
 }
 
-.container{
+.main-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
 }
 
 .recipe {
-  width: 40%;
+  width: 48%;
   /* border: 1px solid Gray; */
   margin: 5px;
   background-color: #cac3c2;
   display: flex;
   flex-direction: column;
-}
-
-.ingredients {
-  /* margin: 10px auto 20px auto;
-  padding: 20px;
-  background-color: White; */
-  /* min-height: 300px; */
-  /* width: 40%; */
 }
 
 img {
@@ -63,10 +56,6 @@ li, ul {
   font-family: Arial Black;
 }
 
-button {
-  margin: 20px auto;
-}
-
 a {
   text-decoration: none;
   color: Black;
@@ -79,7 +68,7 @@ a {
   background-color: White;
   opacity: 0.75;
   padding: 10px;
-  width: 30%;
+  width: 40%;
   margin: auto;
 }
 
@@ -88,29 +77,19 @@ form {
   flex-direction: column;
 }
 
-input, select {
-  margin: auto;
+input {
   height: 25px;
-  font-size: 15px;
+  margin: 5px;
 }
 
-label {
+/* label {
   margin: 10px;
 }
 
 #submit {
   margin: 20px auto;
   height: 25px;
-}
-
-.form {
-  padding: 20px;
-  margin: 20px auto;
-  background-image: url("search.jpg");
-  background-position: center;
-  background-size: stretch;
-  font-size: 20px;
-}
+} */
 
 h2 {
   background-color: #0d3d78;
@@ -119,10 +98,18 @@ h2 {
   color: White;
 }
 
-#search {
+/* #search {
   border-radius: 5px;
   background-color: White;
   margin: 20px auto;
   padding: 5px;
   opacity: 0.75;
+} */
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+@media {
+  min-width: 100%;
 }

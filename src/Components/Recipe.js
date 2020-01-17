@@ -1,7 +1,6 @@
 import React from 'react';
-import Modal from './Modal';
 
-const Recipe = ({title, image, calories, setShow}) => {
+const Recipe = ({title, image, setShow}) => {
 
   return(
     <div className="recipe">
