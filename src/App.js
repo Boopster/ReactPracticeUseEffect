@@ -11,7 +11,7 @@ const App = () => {
 const [recipes, setRecipes] = useState([]);
 const [show, setShow] = useState(false);
 const [query, setQuery] = useState("coffee");
-const [mealType, setMealType] = useState("");
+const [selectRecipe, setSelectRecipe] = useState("");
 
 const API_ID = "78b702bd";
 const API_KEY = "afd2f79a04b1ecad0faad01c7f29539d";
@@ -57,7 +57,7 @@ const handleShow = () => setShow(true);
             id="searchIngredient"
             name="searchIngredient"
             onChange={handleChange}/>
-        <input id="submit" type="submit" value="Submit"/>
+        <Button type="submit">Submit</Button>
         </form>
       </div>
       <div className="main-container">
@@ -67,7 +67,8 @@ const handleShow = () => setShow(true);
               key={id}
               title={r.recipe.label}
               image={r.recipe.image}
-              setShow={setShow}
+              url={r.recipe.url}
+              handleShow={handleShow}
             />
           ))
         }
@@ -75,13 +76,15 @@ const handleShow = () => setShow(true);
       {
         recipes.map((r,id) => (
           <>
-          <Button variant="primary" onClick={handleShow}>
-            Show Ingredients
-          </Button>
-
-          <Modal show={show} onHide={handleClose}>
+          <Modal
+            show={show}
+            onHide={handleClose}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
             <Modal.Header closeButton>
-              <Modal.Title>Ingredients List</Modal.Title>
+              <Modal.Title id="contained-modal-title-vcenter">Ingredients List</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <IngredientsList
