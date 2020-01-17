@@ -1,27 +1,14 @@
 import React from 'react';
 import Modal from './Modal';
 
-const Recipe = ({title, image, calories, ingredients, show, setShow}) => {
-
-  const ingredientsList = ingredients.map((i, id) => (
-
-      <li>{i.text}</li>
-
-  ))
+const Recipe = ({title, image, calories, setShow}) => {
 
   return(
     <div className="recipe">
       <h2>{title}</h2>
-      <p>Calories: {(Number(calories).toFixed(0))}</p>
+      {/*<p>Calories: {(Number(calories).toFixed(0))}</p>*/}
       <img src={image} alt={title} />
       <button onClick={e => {setShow(true)}}>Show Ingredients</button>
-      <Modal
-        show={show}
-        setShow={setShow}>
-        <div className="ingredients">
-          <ul>{ingredientsList}</ul>
-        </div>
-      </Modal>
     </div>
   )
 }
